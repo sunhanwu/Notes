@@ -1,0 +1,445 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux/Mac OS下安装oh my zsh并配置主题和插件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dd.html" />
+    
+    
+    <link rel="prev" href="ss.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="qshell.html">
+            
+                <a href="qshell.html">
+            
+                    
+                    Linux/Mac OS 下七牛云同步工具qshell的配置与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ss.html">
+            
+                <a href="ss.html">
+            
+                    
+                    Ubuntu16.04服务器搭建ss服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="zsh.html">
+            
+                <a href="zsh.html">
+            
+                    
+                    Linux/Mac OS下安装oh my zsh并配置主题和插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="dd.html">
+            
+                <a href="dd.html">
+            
+                    
+                    Linux下用dd命令制作U盘启动盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="CLI_ss.html">
+            
+                <a href="CLI_ss.html">
+            
+                    
+                    ubuntu 16.04配置shadowsocks+proxychains4 实现终端代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="vsftp.html">
+            
+                <a href="vsftp.html">
+            
+                    
+                    ubuntu16.04配置vsftp服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jupyter-notebook.html">
+            
+                <a href="jupyter-notebook.html">
+            
+                    
+                    Linux服务器配置jupyter-notebook实现远程访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linux/Mac OS下安装oh my zsh并配置主题和插件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linuxmac-os&#x4E0B;&#x5B89;&#x88C5;oh-my-zsh&#x5E76;&#x914D;&#x7F6E;&#x4E3B;&#x9898;&#x548C;&#x63D2;&#x4EF6;">Linux/Mac OS&#x4E0B;&#x5B89;&#x88C5;oh my zsh&#x5E76;&#x914D;&#x7F6E;&#x4E3B;&#x9898;&#x548C;&#x63D2;&#x4EF6;</h1>
+<h2 id="&#x5B89;&#x88C5;oh-my-zsh">&#x5B89;&#x88C5;oh my zsh</h2>
+<ol>
+<li><p>&#x5B89;&#x88C5;git &#x3001;zsh</p>
+<ul>
+<li>Linux(Ubuntu16.04)</li>
+</ul>
+<pre><code class="lang-bash">sudo apt-get install zsh git
+</code></pre>
+<ul>
+<li>Mac OS</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x5148;&#x81EA;&#x884C;&#x767E;&#x5EA6;&#x5B89;&#x88C5;homebrew</span>
+brew install git
+</code></pre>
+</li>
+</ol>
+<ol>
+<li><p>&#x5B89;&#x88C5;oh my zsh(&#x4E24;&#x79CD;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;&#x76F8;&#x540C;)</p>
+<pre><code class="lang-bash">sh -c <span class="hljs-string">&quot;<span class="hljs-variable">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span>
+</code></pre>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x4E3B;&#x9898;&#xFF1A;vim &#xFF5E;/.zshrc</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x884C;&#x6539;&#x4E3A;</span>
+ZSH_THEME=<span class="hljs-string">&quot;agnoster&quot;</span>
+</code></pre>
+<ul>
+<li>source ~/.zshrc</li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x914D;&#x7F6E;&#x63D2;&#x4EF6;">&#x914D;&#x7F6E;&#x63D2;&#x4EF6;</h2>
+<ol>
+<li><p>wd </p>
+<ul>
+<li>&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x7684;&#x5207;&#x6362;&#x5230;&#x5E38;&#x7528;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x2029;&#x200B;            </li>
+<li>&#x6211;&#x4EEC;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x65F6;&#x7ECF;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x2029;&#x6211;&#x4EEC;&#x5E38;&#x7528;&#x7684;&#x76EE;&#x5F55;&#x5C31;&#x90A3;&#x4E48;&#x51E0;&#x4E2A;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x76EE;&#x5F55;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x518D;&#x5F88;&#x6DF1;&#x7684;&#x5C42;&#x7EA7;&#x4E2D;&#x3002;&#x2029;&#x4F7F;&#x7528; cd &#x547D;&#x4EE4;&#x5728;&#x8FD9;&#x4E9B;&#x6DF1;&#x5C42;&#x7EA7;&#x76EE;&#x5F55;&#x4E2D;&#x5207;&#x6362;&#x5C31;&#x6BD4;&#x8F83;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#x4E86;&#x3002;&#x2029;&#x200B;            </li>
+<li>&#x4F8B;&#x5982; Nginx&#x7684;wwwroot&#x76EE;&#x5F55;/usr/share/nginx/html &#x2029;,&#x6211;&#x4EEC;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x8F93;&#x5165;wd add html   #&#x8FD9;&#x4E2A;html&#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x662F;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x53D6;&#x7684;.&#x2029;&#x4E0B;&#x6B21;&#x518D;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8F93;&#x5165; wd thml</li>
+<li>wd&#x7528;&#x6CD5;&#xFF1A;</li>
+</ul>
+<pre><code>Usage: wd [command] [point]
+
+Commands:
+    add &lt;point&gt;     Adds the current working directory to your warp points
+    add             Adds the current working directory to your warp points with current directory&apos;s name
+    add! &lt;point&gt;    Overwrites existing warp point
+    add!            Overwrites existing warp point with current directory&apos;s name
+    rm &lt;point&gt;      Removes the given warp point
+    rm              Removes the given warp point with current directory&apos;s name
+    show &lt;point&gt;    Print path to given warp point
+    show            Print warp points to current directory
+    list            Print all stored warp points
+    ls  &lt;point&gt;     Show files from given warp point (ls)
+    path &lt;point&gt;    Show the path to given warp point (pwd)
+    clean!          Remove points warping to nonexistent directories
+
+    -v | --version  Print version
+    -d | --debug    Exit after execution with exit codes (for testing)
+    -c | --config   Specify config file (default ~/.warprc)
+    -q | --quiet    Suppress all output
+
+    help            Show this extremely helpful text
+</code></pre></li>
+<li><p>sudo</p>
+<ul>
+<li>&#x8FDE;&#x6309;&#x4E24;&#x6B21;Esc&#x6DFB;&#x52A0;&#x6216;&#x53BB;&#x6389;sudo</li>
+</ul>
+</li>
+<li><p>zsh-syntax-highlighting&#x2029;&#x200B;    #&#x9AD8;&#x4EAE;&#x53EF;&#x7528;&#x547D;&#x4EE4;</p>
+<ol>
+<li><p>Linux</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="hljs-variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting
+</code></pre>
+</li>
+<li><p>Mac OS</p>
+<pre><code class="lang-bash">brew install zsh-syntax-highlighting
+<span class="hljs-built_in">source</span> /usr/<span class="hljs-built_in">local</span>/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>zsh-autosuggestions&#x2029;&#x200B;    #&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x5EFA;&#x8BAE;</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions <span class="hljs-variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
+</code></pre>
+</li>
+<li><p>&#x5B89;&#x88C5;</p>
+</li>
+<li><p>&#x5728;&#xFF5E;/.zshrc&#x4E0B;&#x914D;&#x7F6E;</p>
+</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># Add wisely, as too many plugins slow down shell startup.</span>
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  wd
+  sudo
+)
+</code></pre>
+<ul>
+<li>&#x6700;&#x540E;source ~/.zshrc</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ss.html" class="navigation navigation-prev " aria-label="Previous page: Ubuntu16.04服务器搭建ss服务">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dd.html" class="navigation navigation-next " aria-label="Next page: Linux下用dd命令制作U盘启动盘">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux/Mac OS下安装oh my zsh并配置主题和插件","level":"1.2.3","depth":2,"next":{"title":"Linux下用dd命令制作U盘启动盘","level":"1.2.4","depth":2,"path":"Linux/dd.md","ref":"Linux/dd.md","articles":[]},"previous":{"title":"Ubuntu16.04服务器搭建ss服务","level":"1.2.2","depth":2,"path":"Linux/ss.md","ref":"Linux/ss.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/zsh.md","mtime":"2018-08-22T00:18:15.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-22T12:41:24.915Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

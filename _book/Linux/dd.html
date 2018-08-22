@@ -1,0 +1,377 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux下用dd命令制作U盘启动盘 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CLI_ss.html" />
+    
+    
+    <link rel="prev" href="zsh.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="qshell.html">
+            
+                <a href="qshell.html">
+            
+                    
+                    Linux/Mac OS 下七牛云同步工具qshell的配置与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ss.html">
+            
+                <a href="ss.html">
+            
+                    
+                    Ubuntu16.04服务器搭建ss服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="zsh.html">
+            
+                <a href="zsh.html">
+            
+                    
+                    Linux/Mac OS下安装oh my zsh并配置主题和插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="dd.html">
+            
+                <a href="dd.html">
+            
+                    
+                    Linux下用dd命令制作U盘启动盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="CLI_ss.html">
+            
+                <a href="CLI_ss.html">
+            
+                    
+                    ubuntu 16.04配置shadowsocks+proxychains4 实现终端代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="vsftp.html">
+            
+                <a href="vsftp.html">
+            
+                    
+                    ubuntu16.04配置vsftp服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jupyter-notebook.html">
+            
+                <a href="jupyter-notebook.html">
+            
+                    
+                    Linux服务器配置jupyter-notebook实现远程访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linux下用dd命令制作U盘启动盘</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linux&#x4E0B;&#x7528;dd&#x547D;&#x4EE4;&#x5236;&#x4F5C;u&#x76D8;&#x542F;&#x52A8;&#x76D8;">Linux&#x4E0B;&#x7528;dd&#x547D;&#x4EE4;&#x5236;&#x4F5C;U&#x76D8;&#x542F;&#x52A8;&#x76D8;</h1>
+<blockquote>
+<p>&#x5728;manjaro&#x7CFB;&#x7EDF;&#x4E0B;&#x6D4B;&#x8BD5;</p>
+</blockquote>
+<ol>
+<li><p>&#x67E5;&#x8BE2;U&#x76D8;&#x5BF9;&#x5E94;&#x6587;&#x4EF6;sudo fdisk -l</p>
+<p>```bash
+Disk /dev/nvme0n1&#xFF1A;238.5 GiB&#xFF0C;256060514304 &#x5B57;&#x8282;&#xFF0C;500118192 &#x4E2A;&#x6247;&#x533A;
+&#x5355;&#x5143;&#xFF1A;&#x6247;&#x533A; / 1 * 512 = 512 &#x5B57;&#x8282;
+&#x6247;&#x533A;&#x5927;&#x5C0F;(&#x903B;&#x8F91;/&#x7269;&#x7406;)&#xFF1A;512 &#x5B57;&#x8282; / 512 &#x5B57;&#x8282;
+I/O &#x5927;&#x5C0F;(&#x6700;&#x5C0F;/&#x6700;&#x4F73;)&#xFF1A;512 &#x5B57;&#x8282; / 512 &#x5B57;&#x8282;
+&#x78C1;&#x76D8;&#x6807;&#x7B7E;&#x7C7B;&#x578B;&#xFF1A;gpt
+&#x78C1;&#x76D8;&#x6807;&#x8BC6;&#x7B26;&#xFF1A;09CDCE5C-F487-42C9-83BF-B41ACD262434</p>
+<p>&#x8BBE;&#x5907;                &#x8D77;&#x70B9;      &#x672B;&#x5C3E;      &#x6247;&#x533A;   &#x5927;&#x5C0F; &#x7C7B;&#x578B;
+/dev/nvme0n1p1      4097    618497    614401   300M EFI &#x7CFB;&#x7EDF;
+/dev/nvme0n1p2    618498 481648510 481030013 229.4G Linux &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;
+/dev/nvme0n1p3 481648511 500103449  18454939   8.8G Linux swap</p>
+</li>
+</ol>
+<p>   Disk /dev/sda&#xFF1A;28.7 GiB&#xFF0C;30752000000 &#x5B57;&#x8282;&#xFF0C;60062500 &#x4E2A;&#x6247;&#x533A;
+   &#x5355;&#x5143;&#xFF1A;&#x6247;&#x533A; / 1 * 512 = 512 &#x5B57;&#x8282;
+   &#x6247;&#x533A;&#x5927;&#x5C0F;(&#x903B;&#x8F91;/&#x7269;&#x7406;)&#xFF1A;512 &#x5B57;&#x8282; / 512 &#x5B57;&#x8282;
+   I/O &#x5927;&#x5C0F;(&#x6700;&#x5C0F;/&#x6700;&#x4F73;)&#xFF1A;512 &#x5B57;&#x8282; / 512 &#x5B57;&#x8282;
+   &#x78C1;&#x76D8;&#x6807;&#x7B7E;&#x7C7B;&#x578B;&#xFF1A;dos
+   &#x78C1;&#x76D8;&#x6807;&#x8BC6;&#x7B26;&#xFF1A;0xcad4ebea</p>
+<p>   &#x8BBE;&#x5907;       &#x542F;&#x52A8; &#x8D77;&#x70B9;     &#x672B;&#x5C3E;     &#x6247;&#x533A;  &#x5927;&#x5C0F; Id &#x7C7B;&#x578B;
+   /dev/sda4  *     256 60062499 60062244 28.7G  c W95 FAT32 (LBA)</p>
+<pre><code>
+   &#x53D1;&#x73B0;U&#x76D8;&#x5BF9;&#x5E94;&#x7684;&#x662F;/dev/sda4
+
+2. &#x4F7F;&#x7528;dd&#x547D;&#x4EE4;&#x5199;&#x5165;iso&#x6587;&#x4EF6;
+
+   ```bash
+   sudo dd if=/home/sun/manjaro.iso of=/dev/sda4 bs=4M
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="zsh.html" class="navigation navigation-prev " aria-label="Previous page: Linux/Mac OS下安装oh my zsh并配置主题和插件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CLI_ss.html" class="navigation navigation-next " aria-label="Next page: ubuntu 16.04配置shadowsocks+proxychains4 实现终端代理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux下用dd命令制作U盘启动盘","level":"1.2.4","depth":2,"next":{"title":"ubuntu 16.04配置shadowsocks+proxychains4 实现终端代理","level":"1.2.5","depth":2,"path":"Linux/CLI_ss.md","ref":"Linux/CLI_ss.md","articles":[]},"previous":{"title":"Linux/Mac OS下安装oh my zsh并配置主题和插件","level":"1.2.3","depth":2,"path":"Linux/zsh.md","ref":"Linux/zsh.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/dd.md","mtime":"2018-08-22T00:20:13.635Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-22T12:41:24.915Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
