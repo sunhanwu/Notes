@@ -9,4 +9,5 @@
     * [ubuntu 16.04配置shadowsocks+proxychains4 实现终端代理](Linux/CLI_ss.md)
     * [ubuntu16.04配置vsftp服务器](Linux/vsftp.md)
     * [Linux服务器配置jupyter-notebook实现远程访问](Linux/jupyter-notebook.md)
+    * [gitbook使用](Linux/gitbook.md)
 
