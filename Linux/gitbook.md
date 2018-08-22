@@ -9,4 +9,22 @@ git commit -m "修改的简述"
 git push -u github master
 ```
 
+![](http://pdt3s257u.bkt.clouddn.com/Snip20180822_8.png)
+
+## 服务器从github同步数据
+```bash
+git pull github master
+```
+
+![](http://pdt3s257u.bkt.clouddn.com/Snip20180822_9.png)
+
+## 重启gitbook服务
+```bash
+lsof -i:4000
+# 找到pid之后杀死进程
+kill -9 pid
+setsid gitbook serve .
+```
+
+![](http://pdt3s257u.bkt.clouddn.com/20180822/Snip20180822_10.png)
 
