@@ -10,4 +10,5 @@
     * [ubuntu16.04配置vsftp服务器](Linux/vsftp.md)
     * [Linux服务器配置jupyter-notebook实现远程访问](Linux/jupyter-notebook.md)
     * [gitbook使用](Linux/gitbook.md)
+    * [shadowsocks启动报错](Linux/ss_err.md)
 
