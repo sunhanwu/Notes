@@ -11,6 +11,7 @@
     * [Linux服务器配置jupyter-notebook实现远程访问](Linux/jupyter-notebook.md)
     * [gitbook使用](Linux/gitbook.md)
     * [shadowsocks启动报错](Linux/ss_err.md)
+    * [CoolMusic的使用方法](Linux/CoolMusic.md)
 * [Kali](Kali/README.md)
     * [Nmap的使用](Kali/Nmap.md)
     * [Arp-Scan的使用](Kali/arp-scan.md)
