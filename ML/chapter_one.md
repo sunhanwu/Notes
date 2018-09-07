@@ -1,4 +1,4 @@
-# 机器学习笔记     第一次课
+# 机器学习笔记     第一讲
 
 Author：刘欢 Liu Huan    Date：2018.09.03    Class：Machine Learning
 
