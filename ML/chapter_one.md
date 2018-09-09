@@ -1,4 +1,4 @@
-# 机器学习笔记     第一讲
+# 机器学习笔记     第一次课
 
 Author：刘欢 Liu Huan    Date：2018.09.03    Class：Machine Learning
 
@@ -26,7 +26,7 @@ Author：刘欢 Liu Huan    Date：2018.09.03    Class：Machine Learning
 
 * 特征向量 feature vector：也可称一个示例为特征向量。
 
-* 一般的，令 D = {**x~1~**,**x~2~**,…,**x~m~**} 表示包含了m个示例的数据集，每个示例由d个属性描述，每个示例是 **x~i~** = (x~i1~;x~i2~;…x~id~) 是d维样本空间 $\chi$  中的一个向量，**x~i~** $ \in\chi$ ，其中 x~ij~ 是 **x~i~** 在第 j 个属性上的取值。d 称为样本 **x~i~** 的维度(dimensionality)。
+* 一般的，令 D = {**x<sub>1</sub>**,**x<sub>2</sub>**,…,**x<sub>m</sub>**} 表示包含了m个示例的数据集，每个示例由d个属性描述，每个示例是 **x<sub>i</sub>** = (x<sub>i1</sub>;x<sub>i2</sub>;…x<sub>id</sub>) 是d维样本空间 $$\chi$$  中的一个向量，**x<sub>i</sub>** $$ \in\chi$$ ，其中 x<sub>ij</sub> 是 **x<sub>i</sub>** 在第 j 个属性上的取值。d 称为样本 **x<sub>i</sub>** 的维度(dimensionality)。
 * 学习 learning 训练 training：从数据中学得模型的过程，这个过程通过某种学习算法来完成。
 
 * 训练数据 training data：训练过程中使用的数据。
@@ -39,7 +39,7 @@ Author：刘欢 Liu Huan    Date：2018.09.03    Class：Machine Learning
 
 * 样例 example：拥有了标记信息的示例。
 
-  > 一般的用（**x~i~**, y~i~) 表示第 i 个样例，其中 y~i~ $ \in $ $\mathcal{Y}$ 是示例的 **x~i~**的标记，$\mathcal{Y}$ 是所有标记的集合。
+  > 一般的用（**x<sub>i</sub>**, y<sub>i</sub>) 表示第 i 个样例，其中 y<sub>i</sub> $$\in $$ $$\mathcal{Y}$$ 是示例的 **x<sub>i</sub>**的标记，$$\mathcal{Y}$$ 是所有标记的集合。
 
 * 标记空间 label space 输出空间：所有标记的集合。
 
