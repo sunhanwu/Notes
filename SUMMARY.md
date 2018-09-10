@@ -18,3 +18,4 @@
     * [Arp-Scan的使用](Kali/arp-scan.md)
 * 机器学习
     * [第一次课](ML/chapter_one.md)
+    * [第二次课](ML/chapter_two.md)
