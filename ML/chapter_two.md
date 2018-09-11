@@ -143,7 +143,7 @@ Author：刘欢 Liu Huan    Date：2018.09.03    Class：Machine Learning
 
     ![](https://ws4.sinaimg.cn/large/0069RVTdly1fv3n8atzprj30gb0cwdia.jpg)
 
-  * F1度量：$$F1 = \frac{2 \times P \times R}{P + R}= \frac{2 \times TP}{样例总数+TP-TN}$$
+  * F1度量：
 
     ![](https://ws3.sinaimg.cn/large/0069RVTdly1fv3nkhb6gnj30gk02zmxj.jpg)
 
