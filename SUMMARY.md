@@ -20,4 +20,4 @@
     * [第一次课](ML/chapter_one.md)
     * [第二次课](ML/chapter_two.md)
 * [Pandas入门教程](Pandas/README.md)
-	*[pandas入门--serise数据结构](Pandas/pandas入门--serise数据结构.md)
+	* [pandas入门--serise数据结构](Pandas/pandas入门--serise数据结构.md)
