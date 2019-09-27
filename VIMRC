@@ -1,0 +1,95 @@
+call plug#begin('~/.vim/plugged')
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'mhinz/vim-startify'
+Plug 'ervandew/supertab'
+Plug 'python-mode/python-mode'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim'
+Plug 'inkarkat/vim-mark'
+" Plug 'vim-scripts/taglist.vim'
+Plug 'vim-scripts/The-NERD-Commenter'
+Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-scripts/winmanager'
+Plug 'tomasr/molokai'
+Plug 'majutsushi/tagbar'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'Yggdroot/indentLine'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Chiel92/vim-autoformat'
+call plug#end()
+filetype plugin indent on    " required
+
+let mapleader=','
+map <F4> : NERDTreeToggle<CR>"设置快捷键
+nmap ,v :NERDTreeFind<cr>
+"加入缩进线配置
+let g:indentLine_char='┆'
+let g:indentLine_enabled = 1
+let g:ycm_server_python_interpreter = '/Users/sun/anaconda3/bin/python3.6'
+let g:ycm_keep_logfiles = 1
+let g:ycm_log_level = 'debug'
+let g:XkbSwitchEnabled = 1
+color desert "颜色设置
+syntax on "语法高亮
+set number "自动显示行号
+" set paste
+set cursorline "突出显示当前行
+set ts=4 "设置tab长度为4
+set shiftwidth=4 "设定 << 和 >> 命令移动时的宽度为 4
+"
+""解决中文编码乱码
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:jedi#popup_on_dot = 0
+	
+xmap ga <Plug>(EasyAlign)
+let g:NERDSpaceDelims=1     " 注释后面自动加空格"
+let mapleader=","
+set clipboard=unnamed
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = ''
+nmap <F8> :TagbarToggle<CR>
+
+" python-mode 配置
+ let g:pymode_python = 'python3' "设置pyhton3模式
+ let g:pymode_trim_withespaces = 1 " 保存是删除多于空格
+ " let g:pymode_doc = 0 "
+ " let g:pymode_doc_bind  = 'K'  "
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_completion_bind = '<C-Tab>'
+" " let g:pymode_indent = 1 时候用pep8风格的缩进
+" " let g:pymode_motion = 1
+ let g:pymode_lint = 1
+ let g:pymode_rope_goto_definition_bind = "<C-]>"
+ let g:pymode_options_max_line_length = 120
+" " let g:pymode_lint_on_write = 0
+ let g:pymode_lint_checkers = ['pyflakes','pep8']
+ let g:pymode_folding = 1
+
+
+
+
+ " nerdtree配置
+ nmap ,v :NERDTreeFind<cr>
+ nmap ,g :NERDTreeToggle<cr>
+ let NERDTreeShowHidden=1
+let NERDTreeIgnore = [
+            \ '\.git$', '\.hg$', '\.svn$', '\.stversions$', '\.pyc$', '\.pyo$', '\.svn$', '\.swp$',
+            \ '\.DS_Store$', '\.sass-cache$', '__pycache__$', '\.egg-info$', '\.ropeproject$',
+            \ ]
+
+
+
+
+ 
+" tagbar 配置
+nnoremap <leader>t : TagbarToggle<CR>
+
